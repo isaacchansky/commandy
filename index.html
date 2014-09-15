@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Commandy</title>
+  <link rel="stylesheet" href="themes/default.css">
+</head>
+<body>
+
+  <div class="commandy"></div>
+
+  <script src="dist/commandy.js"></script>
+  <script>
+  var commandy = commandy;
+  commandy.init({
+    root: '.commandy',
+    userName: 'user',
+    showTime: true,
+    commands: [
+      'npm run build',
+      'npm run build-min',
+      'npm run watch'
+    ]
+  });
+  console.log(commandy.commands);
+  </script>
+</body>
+</html>

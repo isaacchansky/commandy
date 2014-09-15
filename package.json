@@ -1,0 +1,39 @@
+{
+  "name": "commandy",
+  "version": "0.0.0",
+  "description": "A UI widget to display a series of terminal commands.",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "build-debug": "browserify index.js -o -s commandy > dist/commandy.js",
+    "build-min": "browserify index.js -o -s commandy | uglifyjs -c > dist/commandy.min.js",
+    "build": "npm run build-debug && npm run build-min",
+    "watch": "watchify index.js -d --s commandy -o dist/commandy.js -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/isaacchansky/commandy"
+  },
+  "keywords": [
+    "command",
+    "line",
+    "terminal",
+    "widget",
+    "cli"
+  ],
+  "author": "Isaac Chansky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/isaacchansky/commandy/issues"
+  },
+  "homepage": "https://github.com/isaacchansky/commandy",
+  "devDependencies": {
+    "uglify-js": "^2.4.15",
+    "watchify": "^1.0.2",
+    "browserify": "^5.11.2",
+    "lodash": "^2.4.1",
+    "string": "^2.0.1",
+    "he": "^0.5.0",
+    "q": "^1.0.1"
+  }
+}
